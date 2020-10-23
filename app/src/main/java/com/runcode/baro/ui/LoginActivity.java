@@ -2,8 +2,10 @@ package com.runcode.baro.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -29,6 +31,10 @@ public class LoginActivity extends AppCompatActivity {
         {
             getEmailAndPasswords();
             LoginUser(email,password);
+        });
+        registerBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+            startActivity(intent);
         });
     }
 

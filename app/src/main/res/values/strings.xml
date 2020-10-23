@@ -2,4 +2,14 @@
     <string name="app_name">Baro</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="long_text_course_description">
+        JavaScript is an extremely powerful programming language.
+        One place where its power truly shines is using it to control a web page.
+        Through this course, you learn about the Document Object Model (DOM),
+        how its created, and what capabilities it provides. Then you use JavaScript
+        and the DOM to add, delete, or alter page content; control page styling, and respond
+        to user actions
+    </string>
 </resources>

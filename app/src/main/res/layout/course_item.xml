@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="16dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+        <TextView
+            android:id="@+id/courseTitleHomeEnrolled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            tools:text="intro to javascrips language"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/courseDescriptionHomeEnrolled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            tools:text="@string/long_text_course_description"
+            android:ellipsize="end"
+            />
+
+        <Button
+            android:id="@+id/button_continue_learning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_button"
+            android:text="Continue Learning"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_marginTop="20dp"
+            />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

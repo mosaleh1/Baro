@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.SplashActivity">
 
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -35,7 +34,7 @@
         android:fontFamily="@font/trajan_pro"
         android:text="Baro"
         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
-        android:textColor="@color/color_primary"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
