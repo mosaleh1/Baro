@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.runcode.baro.R;
 import com.runcode.baro.pojo.Course;
+import com.runcode.baro.pojo.Lesson;
 
 import java.util.List;
 
@@ -50,6 +51,10 @@ public class CoursesRecyclerAdapter extends RecyclerView.Adapter<CoursesRecycler
         return items.size();
     }
 
+    public void changeData(List<Course>items){
+        this.items = items;
+        notifyDataSetChanged();
+    }
 
     public static class CoursesViewHolder extends RecyclerView.ViewHolder {
         TextView courseTitle , courseDescription ;
@@ -61,4 +66,5 @@ public class CoursesRecyclerAdapter extends RecyclerView.Adapter<CoursesRecycler
             continueButton = itemView.findViewById(R.id.button_continue_learning);
         }
     }
+
 }

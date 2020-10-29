@@ -5,18 +5,19 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.runcode.baro.ui.CatalogFragment;
-import com.runcode.baro.ui.HomeFragment;
-import com.runcode.baro.ui.SettingsFragment;
+import com.runcode.baro.ui.fragments.CatalogFragment;
+import com.runcode.baro.ui.fragments.HomeFragment;
+import com.runcode.baro.ui.fragments.SettingsFragment;
 
 
 public class PagerAdapter extends FragmentPagerAdapter {
 
-    onChangeFragmentListener mListener;
 
-    public void setListener(onChangeFragmentListener listener) {
+    public void setListener(onTabChangedListener listener) {
         mListener = listener;
     }
+
+    onTabChangedListener mListener ;
 
     public PagerAdapter(@NonNull FragmentManager fm) {
         super(fm);
@@ -25,22 +26,27 @@ public class PagerAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        mListener.onChange(position,"Home");
         Fragment main = new HomeFragment();
         switch (position) {
             case 0:
                 if (mListener != null)
-                    mListener.onChange(position, "Home");
+                {
+                    mListener.onChange(position,"Current courses");
+                }
                 main = new HomeFragment();
                 break;
             case 1:
                 if (mListener != null)
-                    mListener.onChange(position, "Explore");
+                {
+                    mListener.onChange(position,"Explore");
+                }
                 main = new CatalogFragment();
                 break;
             case 2:
                 if (mListener != null)
-                    mListener.onChange(position, "Settings");
+                {
+                    mListener.onChange(position,"Settings");
+                }
                 main = new SettingsFragment();
                 break;
         }
@@ -52,8 +58,9 @@ public class PagerAdapter extends FragmentPagerAdapter {
         return 3;
     }
 
-    public interface onChangeFragmentListener {
-        void onChange(int position, String title);
+    public interface onTabChangedListener
+    {
+        void onChange (int position , String title);
     }
 
 }

@@ -1,4 +1,4 @@
-package com.runcode.baro.ui;
+package com.runcode.baro.ui.fragments;
 
 import android.os.Bundle;
 

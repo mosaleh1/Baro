@@ -1,4 +1,4 @@
-package com.runcode.baro.ui;
+package com.runcode.baro.ui.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -27,7 +27,7 @@ public class SplashActivity extends AppCompatActivity {
               startActivity(intent);
               finish();
           }
-        }, 3000);
+        }, 1000);
 
     }
 }

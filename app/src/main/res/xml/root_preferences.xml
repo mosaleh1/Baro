@@ -1,0 +1,24 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:title="ACCOUNT">
+
+        <EditTextPreference
+            app:key="email"
+            app:title="Email"
+            app:icon="@drawable/ic_email"
+            app:useSimpleSummaryProvider="true"
+            />
+        <EditTextPreference
+            app:key="user_name"
+            app:title="User name"
+            app:icon="@drawable/ic_name"
+            app:useSimpleSummaryProvider="true"
+            />
+        <Preference
+            app:key="change_password"
+            app:title="change password"
+            app:icon="@drawable/ic_lock"
+            app:useSimpleSummaryProvider="true"
+            />
+
+</PreferenceScreen>

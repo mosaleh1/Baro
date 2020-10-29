@@ -4,4 +4,13 @@
         android:id="@+id/action_add_course"
         android:title="add course"
         />
+    <item
+        android:title="My course"
+        android:id="@+id/action_my_courses"
+        />
+    <item
+        android:title="Sign out"
+        android:id="@+id/action_sign_out"
+        />
+
 </menu>

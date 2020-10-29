@@ -2,10 +2,10 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_margin="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="15dp"
-    app:cardElevation="16dp"
+    app:cardElevation="4dp"
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
@@ -39,12 +39,13 @@
 
         <Button
             android:id="@+id/button_continue_learning"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_gravity="end"
             android:background="@drawable/main_button"
             android:text="Continue Learning"
             android:textColor="@color/white"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:layout_marginTop="20dp"
             />
     </LinearLayout>

@@ -6,15 +6,16 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
-    tools:context=".ui.LoginActivity">
+    tools:context=".ui.Activities.LoginActivity">
 
     <TextView
         android:id="@+id/logoLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
         android:fontFamily="@font/trajan_pro"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:textSize="100dp"
         android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,91 +28,105 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailEdLogin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/logoLogin"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.2"
         android:layout_marginBottom="5dp"
-
         app:boxStrokeColor="@color/colorPrimary"
         app:hintTextColor="@color/colorPrimary"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoLogin"
+        app:layout_constraintVertical_bias="0.2">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
-
-            android:isScrollContainer="true"
-            />
+            android:inputType="textEmailAddress"
+            android:isScrollContainer="true" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password_edLogin"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        app:layout_constraintTop_toBottomOf="@id/emailEdLogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:endIconCheckable="true"
+        android:focusable="true"
+        android:textCursorDrawable="@null"
         app:boxStrokeColor="@color/colorPrimary"
+        app:endIconCheckable="true"
         app:endIconDrawable="@drawable/ic_eye"
         app:endIconMode="custom"
-        app:hintTextColor="@color/colorPrimary"
-        android:textCursorDrawable="@null"
         app:endIconTintMode="src_atop"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        app:hintTextColor="@color/colorPrimary"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailEdLogin">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
-            android:isScrollContainer="true"
-            />
+            android:isScrollContainer="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/password_edLogin"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="45dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginStart="15dp"
         android:orientation="vertical"
         android:paddingStart="15dp"
         android:paddingEnd="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_edLogin">
 
-        >
         <Button
             android:id="@+id/login_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:fontFamily="@font/trajan_pro"
-            android:textColor="@color/colorAccent"
             android:background="@drawable/main_button"
-            />
+            android:fontFamily="@font/trajan_pro"
+            android:text="@string/login"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/registerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/register"
-            android:fontFamily="@font/trajan_pro"
             android:layout_marginTop="15dp"
-
             android:background="@drawable/secondary_button"
-            android:textColor="@color/colorPrimary"
-            />
+            android:fontFamily="@font/trajan_pro"
+
+            android:text="@string/register"
+            android:textColor="@color/colorPrimary" />
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:progressTintMode="add"
+        android:visibility="gone"
+        android:indeterminate="true"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progressTint="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/emailEdLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoLogin"
+        app:layout_constraintVertical_bias="0.103" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
